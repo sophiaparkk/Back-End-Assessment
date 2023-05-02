@@ -22,10 +22,16 @@ const { getFortune } = require('./controller')
 
 app.get("/api/fortune", getFortune);
 
+
+
+
 //day
-const { getDay } = require('.controller')
+const { getDay } = require('./controller')
 
 app.get("/api/day", getDay);
+
+
+
 
 
 app.listen(4000, () => console.log("Server running on 4000"));

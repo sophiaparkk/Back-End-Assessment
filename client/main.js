@@ -1,7 +1,8 @@
 //compliment
-const complimentBtn = document.getElementById("complimentButton")
+const complimentBtn = document.getElementById("complimentButton") //assigning variable to get button ID in html
 
-const getCompliment = () => {
+//assigning variable to retrieve information from below url and return the data
+const getCompliment = () => { 
     axios.get("http://localhost:4000/api/compliment/")
         .then(res => {
             const data = res.data;
@@ -30,7 +31,7 @@ const daySelect = document.getElementById("select-day")
 
 const getDay = () => {
     axios
-        .get("http://localhost:4000/api/day/")
+        .get("http://localhost:4000/api/day/${daySelect.value}")
         .then(res => {
             const dayData = res.data;
             alert(dayData);
