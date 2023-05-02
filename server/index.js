@@ -9,6 +9,22 @@ app.use(express.json());
 
 
 //ENDPOINTS
+//name
+const { getName } = require('./controller')
+
+app.get("/api/name", getName);
+
+// app.get('/api/inventory', (req, res) => {
+
+//     if (req.query.item) {
+//         const filteredItems = inventory.filter(invItem => invItem.toLowerCase().includes(req.query.item.toLowerCase()))
+
+//         res.status(200).send(filteredItems)
+//     } 
+//     res.status(200).send(inventory)
+// })
+
+
 //compliment
 const { getCompliment } = require('./controller')
 
@@ -25,10 +41,7 @@ app.get("/api/fortune", getFortune);
 
 
 
-//day
-const { getDay } = require('./controller')
 
-app.get("/api/day", getDay);
 
 
 

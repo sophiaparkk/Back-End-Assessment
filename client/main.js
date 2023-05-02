@@ -26,16 +26,16 @@ const getFortune = () => {
 
 fortuneBtn.addEventListener('click', getFortune)
 
-//how are you doing today
-const daySelect = document.getElementById("select-day")
+//what is your name
+const nameInput = document.getElementById("nameSubmit")
 
-const getDay = () => {
+const getName = () => {
     axios
-        .get("http://localhost:4000/api/day/${daySelect.value}")
+        .get('http://localhost:4000/api/name?item=${nameInput.value}')
         .then(res => {
-            const dayData = res.data;
-            alert(dayData);
+            const nameData = res.data;
+            alert(nameData);
     })
 }
 
-daySelect.addEventListener('click', getDay)
+nameInput.addEventListener('click', getName)
