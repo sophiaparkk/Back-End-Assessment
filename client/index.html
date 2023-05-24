@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <!--NAME-->
+    <h4>What is your name?</h4>
+    <form>
+      <input type="text" id="nameInput" name="name">
+      <button id="nameButton">Submit</button>
+    </form>
+
+    <!--MOOD-->
+    <h4>How are you feeling today?</h4>
+      <select id="moodSelect">
+        <option value="0">Good</option>
+        <option value="1">Bad</option>
+      </select>
+      <button id='moodButton'>Submit</button>
+
+
+    <!--COMPLIMENT-->
+    <h4>Want a compliment?</h4>  
+    <button id="complimentButton">Get a compliment</button>
+
+
+    <!--FORTUNE-->
+    <h4>Want a fortune?</h4>
+    <button id="fortuneButton">Get a fortune</button>
+
+
+    <!--REST-->
+    <h4>Submit your email for a chance to win free food!</h4>
+    <form id="restForm">
+      Email:
+      <input type="text" id="restEmailInput"> 
+      <input type="submit" id="restEmailSubmit">
+
+    </form>
+
+
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+
+
+
+
+  </body>
+</html>
